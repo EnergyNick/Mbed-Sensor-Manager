@@ -1,0 +1,31 @@
+"BLACKPILL": {
+    "inherits": [
+        "MCU_STM32F4"
+    ],
+    "extra_labels_add": [
+        "STM32F411xE"
+    ],
+    "macros_add": [
+        "STM32F411xE",
+        "MBED_ROM_SIZE=0x40000"
+    ],
+    "config": {
+        "clock_source_usb": {
+            "help": "As 48 Mhz clock is configured for USB, SYSCLK has to be reduced from 100 to 60 MHz (set 0 for the max SYSCLK value)",
+            "value": "0",
+            "macro_name": "CLOCK_SOURCE_USB"
+        }
+    },
+    "overrides": {
+        "clock_source": "USE_PLL_HSE_XTAL",
+        "lse_available": 1
+    },
+    "device_has_add": [
+        "USBDEVICE"
+    ],
+    "bootloader_supported": true,
+    "detect_code": [
+        "0740"
+    ],
+    "device_name": "MCU_STM32F411CE"
+}

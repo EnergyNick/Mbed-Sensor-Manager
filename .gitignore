@@ -6,3 +6,5 @@ BUILD
 mbed-os
 DHT
 DHT22
+RS485
+cmake-build-debug
